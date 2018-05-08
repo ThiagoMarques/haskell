@@ -1,8 +1,8 @@
 Exercícios em Haskell.
 
 1) Faça uma função pai que calcule a soma de dois números: a e b e retorne o seu resultado. 
-	a) Mostre o resultado mínimo da função e faça a média com o primeiro valor (a) inserido na função pai.
-	b) Mostre o resultado máximo da função e faça a média com o segundo valor (b) inserido na função pai.
+	a) Mostre o resultado mínimo de a e b e faça a média com o primeiro valor (a) inserido na função pai.
+	b) Mostre o resultado máximo de a e b e faça a média com o segundo valor (b) inserido na função pai.
 	c) Com o resultado mínimo e máximo, faça uma função que multiplique por dez o valor inserido.
 	d) Faça uma função que se o resultado for menor que 100, divida o valor por dez e mostre o resultado e caso contrário, multiplique o valor por dez.
 
