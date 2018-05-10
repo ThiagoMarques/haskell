@@ -1,0 +1,42 @@
+Exercícios em Haskell.
+
+1) Faça uma função pai que calcule a soma de dois números: a e b e retorne o seu resultado. 
+	a) Mostre o resultado mínimo de a e b e faça a média com o primeiro valor (a) inserido na função pai.
+	b) Mostre o resultado máximo de a e b e faça a média com o segundo valor (b) inserido na função pai.
+	c) Com o resultado mínimo e máximo, faça uma função que multiplique por dez o valor inserido.
+	d) Faça uma função que se o resultado for menor que 100, divida o valor por dez e mostre o resultado e caso contrário, multiplique o valor por dez.
+
+	
+2) Faça uma lista que armazene os números pares de 1 a 10 e outra com os números impares. 
+	a) Concatene a lista par com a impar.
+	b) Busque o terceiro elemento pelo seu índice e mostre seu resultado.
+	c) Mostre o resultado utilizando um comando específico para retornar o primeiro elemento.
+	d) Mostre o resultado utilizando um comando específico para retornar o último elemento.
+	e) Mostre a cauda da lista, utilizando um único comando para tal operação.
+	f) Mostre toda a lista com exceção do último elemento, utilizando um único comando para tal operação.
+	g) Mostre o tamanho da lista, verifique se está cheia.
+	h) Inverta os elementos.
+	i) Retire o elemento 1,3 e 5 da lista.
+
+3) Faça uma lista de 1 a 200.
+	a) Mostre a metade da lista em ordem crescente
+	b) Inverta os números maiores que 100 e os mostre.
+	c) Remova todos os elementos da lista e mostre a lista vazia.
+
+4) Faça uma lista que contenha todos os números pares de 1 a 500. 
+	a) A partir da lista de 1 a 500, retorne todos que são divisiveis por 19.
+	b) A partir da lista acima, verifique quantos são maiores que 100.
+
+5) Faça uma lista que contenha as vogais de A a Z maiúsculas.
+	a) Crie uma função que receba essa lista e as deixe minúsculas.
+	b) Inverta a lista minúscula.
+	c) Retorne o tamanho da lista minúscula.
+	d) Compare as duas listas, vejam se são iguais (maiúsculas e minúsculas).
+
+6) Faça uma lista Y de A a Z e de acordo com o tamanho Y faça uma lista X, ou seja, a lista X terá de 0 a N, sendo N o número de elementos de Y.
+	a) Faça uma tupla unindo o primeiro elemento de Y com X e assim por diante, [[aY,aX],[bY,bX],[cY,cX],...,[nY,nX]].
+	b) Inverta a lista.
+
+7) Que triângulo retângulo que tem números inteiros para todos os lados e todos os lados iguais ou menores que 10 e tem um perímetro de 24? Faça o cálculo utilizando lista e tupla.
+
+8)
