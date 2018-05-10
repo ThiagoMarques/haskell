@@ -1,0 +1,50 @@
+Lista - Resolução Professor
+1.
+h)
+qs[][]
+qs(a:as) = qs[e|e<-as,e<a]++[a]++qs[e|e<-as,e>=a]
+*admite repetição, para evitar repetição, tirar o igual:
+qs(a:as) = qs[e|e<-as,e>a]++[a]++qs[e|e<-as,e<a]
+
+
+1.
+i)
+---- Letra B ----
+Descrescente
+f[5,2,0] = True
+f[5,0,2] = False
+
+f(a:b:xs) = (a>=b)&&(b:xs) ex: 5>=2 && 2>=0 && ... 
+*pq funciona? garantia do ultimo elemento vai ser menor que o primeiro? Pq o ultimo elemento da lista é o menor? Pq o ultimo elemento da lista é menor que o primeiro?
+- Propriedade transitiva, o fato de aplicar o operador várias vezes garante!
+
+*caso base: lista sem elementos.
+*só tem um elemento
+f[a] = True (precisa ser true para que a condição seja aceita
+
+---- Letra A ----
+
+f l = dsort l == l
+*mantendo as iguades
+
+---- Letra C ----
+
+f l = fold(&&)(map(>=)zip l (tail l))
+*pega a lista original, obtem duas listas:
+- cauda
+- parear elementos (zip)
+
+*zip l : 5,2 2,0 ... (obtem lista de pares)
+*map: map de uma funçõ que pega um par e verifica se é >= : (\(a,b)->a>=b)resultando em uma lista de booleanos
+*(\(a,b)->a>=b) função anônima
+*fold: faz o fold de todo mundo, para usar o fold utilizar o slide dado em sala de aula.
+
+
+5)
+aplicação parcial de função: dado um inteiro, espera um outro inteiro para retornar a soma deles
+*operador principal: soma
+*como é utilizado: soma de uma vez, parcelada, incremental, parcial...
+addNum y = (y + ) -
+*é chamado de seção, fornece um dos argumentos e o resto fica esperando algo que está faltando...
+
+
