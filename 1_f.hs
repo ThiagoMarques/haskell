@@ -1,5 +1,4 @@
-elem :: [Int] -> Int -> Int
-elem [] n = error "Nao existe"
-elem (x:xs) n | (x == n) = x
-		  | otherwise = elemento xs n
-
+nesimo :: Int -> [Int] -> Int
+nesimo _ [] = error "Vazia"
+nesimo x (a:as) | x <= 0 = a 
+		| otherwise = nesimo (x-1) as
