@@ -1,23 +1,10 @@
-data Tree a = Leaf a | Branch (Tree a) (Tree a)
+data ArvBin a = Nulo | No a (ArvBin a) (ArvBin a)
+              deriving (Eq,Ord,Show,Read)
 
-map :: (a -> b) -> [a] -> [b]
-map _ [] = []
-map f(x:xs) = f x : map f xs
+prof :: ArvBin a -> Integer
+prof Nulo = 0
+prof (No n t1 t2) = 1 + max (prof t1) (prof t2)
 
-treeMap :: (a -> b) -> Tree a -> Tree b
-treeMap :: (a -> b) -> Tree a -> Tree b
-treemap f (Leaf x) = Leaf (f x)
-treeMap f (Branch left right) = Branch (treeMap f left)(treeMap f right)
-
-foldr :: (a -> b -> b) -> b -> [a] -> b
-foldr f z [] = z
-foldr f z (x:xs) = f x (foldr f z xs)
-
-treeFold :: (b -> b -> b) -> (a -> b) -> Tree a -> b
-treeFold fbranch fleaf = g where g (Leaf x) = fleaf x
-				 g (Branch left right) = fbranch (g left) (g right)
-
-tree1 :: Tree Integer
-tree1 = Branch (Branch (Branch (Leaf 1) (Branch (Leaf 2) (Leaf 3))) (Branch (Leaf 4) (Branch (Leaf 5) (Leaf 6)))) (Branch (Branch (Leaf 7) (Leaf 8)) (Leaf 9))
-
-tree2 = Branch (Branch (Leaf 1) (Leaf 2)) (Branch (Leaf 3) (Leaf 4))
+lista :: ArvBin a -> [a]
+lista Nulo = []
+lista (No x t1 t2) = lista t1 ++ [x] ++ lista t2
