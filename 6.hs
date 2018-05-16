@@ -1,14 +1,18 @@
-media :: Float -> Float -> Float
-media x y = (x + y) /2
+type Nome = String
+type Nota = Float
 
-lista_notas1 :: [Float] -> [Float]
-lista_notas1 (x:xs) = (x:xs)
+data Aluno = Faz Nome Nota Nota
 
-lista_notas2 :: [Float] -> [Float]
-lista_notas2 (x:xs) = (x:xs)
+alunopassou :: Float -> Float -> Bool
+alunopassou p1 p2 |(p1+p2)/2 >= 5 = True
+                  |otherwise = False
 
-pares :: [Float] -> [Float] -> [(Float,Float)]
-pares xs [] = []
-pares [] ys = []
-pares (x:xs)(y:ys) = (x,y) : pares xs ys
+organiza :: [(String,Float)] -> [(String,Float)]
+organiza ((a,b):as) = [(c,d) |(c,d) <- as,d <= b] ++ [(a,b)] ++ [(e,f) |(e,f) <- as, f > b]
+
+avaliaAluno :: [Aluno] -> [(String,Float)]
+avaliaAluno [] = []
+avaliaAluno [Faz n p1 p2] | alunopassou p1 p2 = [(n,((p1+p2)/2))]
+                          | otherwise = []
+avaliaAluno (a:as) = organiza (avaliaAluno [a] ++ avaliaAluno as)
 
