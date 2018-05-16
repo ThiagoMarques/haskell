@@ -3,3 +3,4 @@ my_and False _ = False
 my_and _ False = False
 my_and False _ = False
 my_and True True = True
+
