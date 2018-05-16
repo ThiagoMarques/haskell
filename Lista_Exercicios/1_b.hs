@@ -1,2 +1,0 @@
-int :: [Int] -> [Int] -> [Int]
-
